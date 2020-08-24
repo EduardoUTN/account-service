@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "4037381c-a70e-48a7-91a6-40a4c93260b0",
+		"name": "Account Service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - All Accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - All Account's Transaction History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/account/1/transaction/history",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account",
+						"1",
+						"transaction",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Create a New Account'sTransaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\" : \"credit\",\n\t\"amount\" : 5000\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/account/2/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account",
+						"2",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Account Transaction Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/account/1/transaction/23",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account",
+						"1",
+						"transaction",
+						"23"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
