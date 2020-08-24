@@ -51,7 +51,7 @@ public class AccountController {
   @GetMapping(value = "/{id}/transaction/{transactionId}")
   public ResponseEntity<?> getTransactionsByAccountId(@PathVariable Long id, @PathVariable Long transactionId)
       throws EntityDoesnNotExistException {
-    Transaction transaction = accountService.findTransactionByIdAndAccountId(id, transactionId);
+    Transaction transaction = accountService.findTransactionByIdAndAccountId(transactionId, id);
     return ResponseEntity.ok(transaction);
   }
 
